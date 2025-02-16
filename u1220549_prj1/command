@@ -1,0 +1,68 @@
+Q1) mkdir -p u1220549_prj1/mydir/mp3
+    mkdir -p u1220549_prj1/mydir/info/personal
+    mkdir -p u1220549_prj1/mydir/moves
+    mkdir -p u1220549_prj1/first_semester/myData/courses/comp2311
+    mkdir -p u1220549_prj1/first_semester/myData/courses/comp233
+    mkdir -p u1220549_prj1/first_semester/myData/courses/comp242
+    mkdir -p u1220549_prj1/first_semester/myDocuments/f2024/linux
+    mkdir -p u1220549_prj1/first_semester/myDocuments/f2024/java
+
+    touch u1220549_prj1/command
+    touch u1220549_prj1/mydir/mp3/Mp3_list
+    touch u1220549_prj1/mydir/info/personal/best_places
+    touch u1220549_prj1/mydir/info/personal/myInfo
+    touch u1220549_prj1/mydir/moves/moves_list
+    touch u1220549_prj1/firt_semester/myData/My_Schedule
+    touch u1220549_prj1/firt_semester/myDocuments/f2024/linux/final
+    touch u1220549_prj1/firt_semester/myDocuments/f2024/java/projects
+    touch u1220549_prj1/firt_semester/myDocuments/f2024/java/practicl
+
+    vi u1220549_prj1/mydir/info/personal/myInfo
+    vi u1220549_prj1/mydir/info/personal/best_places
+    vi u1220549_prj1/mydir/mp3/Mp3_list
+    vi u1220549_prj1/mydir/moves/moves_list 
+    vi u1220549_prj1/firt_semester/myData/My_Schedule
+    vi u1220549_prj1/firt_semester/myData/courses/comp242/Queue
+    vi u1220549_prj1/firt_semester/myDocuments/f2024/linux/final
+    vi u1220549_prj1/firt_semester/myDocuments/f2024/java/projects
+    vi u1220549_prj1/firt_semester/myDocuments/f2024/java/practicl
+--------------------------------------
+Q2) a- :map! H ^[G4dw^M
+    b- :map W GK3yy8GP
+--------------------------------------
+Q3) a-Hard link :- cd u1220549_prj1/firt_semester/myDocuments
+		 - ln ./../../mydir/info/personal/myInfo linkmyInfo
+    b-Soft link :- cd u1220549_prj1/firt_semester/myData/courses
+		 - ln -s ./../../myDocuments/f2024 link_courses
+--------------------------------------
+Q4)  vi u1220549_prj1/mydir/info/personal/best_places
+--------------------------------------
+Q5) A- G$(command mode)
+    B- 3G(command mode)
+    C- 5G2K2yy(command mode)
+    D- ?Toqa Press Enter 2dw (command mode)
+    E- 1G2ddGP(command mode)
+
+------------------------------------
+Q6) find /etc/ -name '[hj]?[aeiou]*' -type f
+------------------------------------
+Q7)   cp u1220549_prj1/firt_semester/myDocuments/f2024/java/projects u1220549_prj1/firt_semester/myData/courses/comp2311
+      cp u1220549_prj1/firt_semester/myDocuments/f2024/java/practicl u1220549_prj1/firt_semester/myData/courses/comp2311
+-------------------------------------
+Q8)  touch u1220549_prj1/firt_semester/myData/courses/comp242/Queue
+     rmdir u1220549_prj1/firt_semester/myData/courses/comp242
+     can't remove becuase it's not empty ,rmdir: failed to remove 'u1220549_prj1/firt_semester/myData/courses/comp242': Directory not empty
+     you can remove the directory using this way:
+     rm -rf u1220549_prj1/first_semester/myData/courses/comp242
+--------------------------------------
+Q9) chmod 560 u1220549_prj1/firt_semester/myDocuments/f2024/linux/
+    to be sure :ls -il u1220549_prj1/firt_semester/myDocuments/f2024
+--------------------------------------
+Q10) a- chmod 246 u1220549_prj1/firt_semester/myDocuments/f2024/java/projects
+     b- chmod 420 u1220549_prj1/firt_semester/myDocuments/f2024/java/projects(-wxr-xrwx(357) -->777-357 = 420)
+     c- chmod 431 u1220549_prj1/firt_semester/myDocuments/f2024/java/projects(-wxr--rw(346) -->777-346 = 431)
+--------------------------------------
+Q11) stat -c "%z" u1220549_prj1/mydir/info/personal/myInfo
+     2023-11-28 21:47:54.521633282 +0200
+--------------------------------------
+ 
